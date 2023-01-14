@@ -9,7 +9,7 @@ const path = require('path');
 const app = express();
 
 app.use(cors({
-    origin: 'https://sparkling-cat-ef36f2.netlify.app/'
+    origin: '*'
 }));
 
 // Crear un servidor http utilizando la instancia de express
