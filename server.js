@@ -1,13 +1,13 @@
 // Importar las dependencias necesarias
 const express = require('express');
 const http = require('http');
-const socketio = require('socket.io');
+
 // Importar cors
 const cors = require('cors');
 const path = require('path');
 // Crear una instancia de express
 const app = express();
-
+const socketio = require('socket.io')(app);
 app.use(cors());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
