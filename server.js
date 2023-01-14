@@ -4,6 +4,7 @@ const http = require('http');
 const socketio = require('socket.io');
 // Importar cors
 const cors = require('cors');
+const path = require('path');
 // Crear una instancia de express
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Crear un servidor http utilizando la instancia de express
 const server = http.createServer(app);

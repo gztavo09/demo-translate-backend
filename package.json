@@ -5,11 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "babel-node server.js --exec"
   },
   "author": "Gustavo Arias",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/node": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http": "0.0.1-security",
