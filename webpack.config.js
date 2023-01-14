@@ -17,10 +17,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env','@babel/preset-minify']
+            presets: ['@babel/preset-env']
           }
         }
       }
     ]
   }
-};
+}
