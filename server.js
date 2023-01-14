@@ -8,8 +8,12 @@ const path = require('path');
 // Crear una instancia de express
 const app = express();
 
+app.use(cors({
+    origin: 'https://sparkling-cat-ef36f2.netlify.app/'
+}));
+
 // Crear un servidor http utilizando la instancia de express
-const server = http.createServer(cors(), app);
+const server = http.createServer(app);
 
 // Inicializar Socket.io en el servidor
 const socketio = require('socket.io');
