@@ -7,7 +7,7 @@ const cors = require('cors');
 const path = require('path');
 // Crear una instancia de express
 const app = express();
-const socketio = require('socket.io')(app);
+
 app.use(cors());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -21,7 +21,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 const server = http.createServer(app);
 
 // Inicializar Socket.io en el servidor
-const io = socketio(server);
+const socketio = require('socket.io');
+const io = new socketio.Server(server, {
+    path: "/"
+});
 
 // Escuchar para conexiones de socket
 io.on('connection', socket => {
