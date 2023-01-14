@@ -7,10 +7,9 @@ const cors = require('cors');
 const path = require('path');
 // Crear una instancia de express
 const app = express();
-app.use(cors());
 
 // Crear un servidor http utilizando la instancia de express
-const server = http.createServer(app);
+const server = http.createServer(cors(), app);
 
 // Inicializar Socket.io en el servidor
 const socketio = require('socket.io');
