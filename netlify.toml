@@ -1,9 +1,0 @@
-[build]
-  command = "npm run start"
-  functions = "functions"
-
-[[redirects]]
-  from = "/socket.io/*"
-  to = "https://singular-fudge-83068c.netlify.app/socket.io/:splat"
-  status = 301
-
