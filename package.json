@@ -5,18 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node server3.js",
     "dev": "nodemon server.js"
   },
   "author": "Gustavo Arias",
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.20.7",
-    "@babel/node": "^7.20.7",
     "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "firebase": "^9.16.0",
+    "firebase-admin": "^11.4.1",
     "http": "0.0.1-security",
     "socket.io": "^4.5.4"
   },
