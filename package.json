@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server3.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server3.js"
   },
   "author": "Gustavo Arias",
   "license": "MIT",

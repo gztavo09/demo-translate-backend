@@ -16,7 +16,9 @@ const port = process.env.PORT || 3000;
 const server = app.listen(port);
 const io = socketio(server);
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 
 app.post('/create-session', (req, res) => {
     // Generar código único de 16 caracteres
